@@ -55,49 +55,49 @@ namespace BET_Controller_v2
             Keyboard.Focus(kbp);
             if (e.Key == Key.W)
             {
-                sp.Write("1");
+                sp.WriteLine("1");
                 pbkc.IsIndeterminate = true;
                 cmd.Text = "W: fast forward";
             }
             else if (e.Key == Key.S)
             {
-                sp.Write("0");
+                sp.WriteLine("0");
                 pbkc.IsIndeterminate = true;
                 cmd.Text = "S: fast back";
             }
             else if (e.Key == Key.A)
             {
-                sp.Write("4");
+                sp.WriteLine("4");
                 pbkc.IsIndeterminate = true;
                 cmd.Text = "A: fast left";
             }
             else if (e.Key == Key.D)
             {
-                sp.Write("3");
+                sp.WriteLine("3");
                 pbkc.IsIndeterminate = true;
                 cmd.Text = "D: fast right";
             }
             else if (e.Key == Key.NumPad8)
             {
-                sp.Write("6");
+                sp.WriteLine("6");
                 pbkc.IsIndeterminate = true;
                 cmd.Text = "9: slow front";
             }
             else if (e.Key == Key.NumPad2)
             {
-                sp.Write("7");
+                sp.WriteLine("7");
                 pbkc.IsIndeterminate = true;
                 cmd.Text = "2: slow back";
             }
             else if (e.Key == Key.NumPad6)
             {
-                sp.Write("8");
+                sp.WriteLine("8");
                 pbkc.IsIndeterminate = true;
                 cmd.Text = "6: slow right";
             }
             else if (e.Key == Key.NumPad4)
             {
-                sp.Write("9");
+                sp.WriteLine("9");
                 pbkc.IsIndeterminate = true;
                 cmd.Text = "D: slow left";
             }
@@ -105,7 +105,7 @@ namespace BET_Controller_v2
         }
         private void Kbp_KeyUp(object sender, KeyEventArgs e)
         {
-            sp.Write("5");
+            sp.WriteLine("5");
             pbkc.IsIndeterminate = false;
             cmd.Text = "STOP";
         }
@@ -143,42 +143,42 @@ namespace BET_Controller_v2
 
         private void front_fast_GotMouseCapture(object sender, MouseEventArgs e)
         {
-            sp.Write("1");
+            sp.WriteLine("1");
             cmd.Text = "Fast Forward";
             pb1.IsIndeterminate = true;
         }
 
         private void front_fast_LostMouseCapture(object sender, MouseEventArgs e)
         {
-            sp.Write("5");
+            sp.WriteLine("5");
             cmd.Text = "STOP";
             pb1.IsIndeterminate = false;
         }
 
         private void back_fast_GotMouseCapture(object sender, MouseEventArgs e)
         {
-            sp.Write("0");
+            sp.WriteLine("0");
             cmd.Text = "Fast Backward";
             pb1.IsIndeterminate = true;
         }
 
         private void back_fast_LostMouseCapture(object sender, MouseEventArgs e)
         {
-            sp.Write("5");
+            sp.WriteLine("5");
             cmd.Text = "STOP";
             pb1.IsIndeterminate = false;
         }
 
         private void left_fast_GotMouseCapture(object sender, MouseEventArgs e)
         {
-            sp.Write("4");
+            sp.WriteLine("4");
             cmd.Text = "Fast left";
             pb1.IsIndeterminate = true;
         }
 
         private void left_fast_LostMouseCapture(object sender, MouseEventArgs e)
         {
-            sp.Write("5");
+            sp.WriteLine("5");
             cmd.Text = "STOP";
             pb1.IsIndeterminate = false;
         }
@@ -212,21 +212,21 @@ namespace BET_Controller_v2
 
         private void right_fast_GotMouseCapture(object sender, MouseEventArgs e)
         {
-            sp.Write("3");
+            sp.WriteLine("3");
             cmd.Text = "Fast Right";
             pb1.IsIndeterminate = true;
         }
 
         private void right_fast_LostMouseCapture(object sender, MouseEventArgs e)
         {
-            sp.Write("5");
+            sp.WriteLine("5");
             cmd.Text = "STOP";
             pb1.IsIndeterminate = false;
         }
 
         private void front_slow_GotMouseCapture(object sender, MouseEventArgs e)
         {
-            sp.Write("6");
+            sp.WriteLine("6");
             cmd.Text = "Slow Front";
             pb2.IsIndeterminate = true;
         }
@@ -234,13 +234,13 @@ namespace BET_Controller_v2
 
         private void front_slow_LostMouseCapture(object sender, MouseEventArgs e)
         {
-            sp.Write("5");
+            sp.WriteLine("5");
             cmd.Text = "STOP";
             pb2.IsIndeterminate = false;
         }
         private void back_slow_LostMouseCapture(object sender, MouseEventArgs e)
         {
-            sp.Write("5");
+            sp.WriteLine("5");
             cmd.Text = "STOP";
             pb2.IsIndeterminate = false;
         }
@@ -248,59 +248,59 @@ namespace BET_Controller_v2
 
         private void back_slow_GotMouseCapture(object sender, MouseEventArgs e)
         {
-            sp.Write("7");
+            sp.WriteLine("7");
             cmd.Text = "Slow Back";
             pb2.IsIndeterminate = true;
         }
         private void left_slow_GotMouseCapture(object sender, MouseEventArgs e)
         {
-            sp.Write("9");
+            sp.WriteLine("9");
             cmd.Text = "Slow Left";
             pb2.IsIndeterminate = true;
         }
 
         private void left_slow_LostMouseCapture(object sender, MouseEventArgs e)
         {
-            sp.Write("5");
+            sp.WriteLine("5");
             cmd.Text = "STOP";
             pb2.IsIndeterminate = false;
         }
 
         private void right_slow_LostMouseCapture(object sender, MouseEventArgs e)
         {
-            sp.Write("5");
+            sp.WriteLine("5");
             cmd.Text = "STOP";
             pb2.IsIndeterminate = false;
         }
 
         private void right_slow_GotMouseCapture(object sender, MouseEventArgs e)
         {
-            sp.Write("8");
+            sp.WriteLine("8");
             cmd.Text = "Slow Right";
             pb2.IsIndeterminate = true;
         }
 
         private void stop_fast_Click(object sender, RoutedEventArgs e)
         {
-            sp.Write("5");
+            sp.WriteLine("5");
             cmd.Text = "STOP";
         }
 
         private void stop_slow_Click(object sender, RoutedEventArgs e)
         {
-            sp.Write("5");
+            sp.WriteLine("5");
             cmd.Text = "STOP";
         }
 
         private void rr360_Click(object sender, RoutedEventArgs e)
         {
-            sp.Write("4");
+            sp.WriteLine("4");
             cmd.Text = "360 deg right rotation";
         }
 
         private void lr360_Click(object sender, RoutedEventArgs e)
         {
-            sp.Write("3");
+            sp.WriteLine("3");
             cmd.Text = "360 deg left rotation";
         }
 
